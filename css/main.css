@@ -1,0 +1,110 @@
+@charset "utf-8";
+/*init*/
+input, button, select, textarea{
+    outline: 0 none;
+    font-family: inherit;
+    -webkit-appearance: button;
+    border: 0;
+    text-transform: none;
+    background-color: transparent;
+}
+
+/*rotateball*/
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#rotate{
+    width: 300px;
+    height: 250px;
+    position: relative;
+    margin: 40px auto;
+    top: 50%;
+    margin-top: -145px;
+}
+#rotate a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #bd078e;
+    font-weight: bold;
+    padding: 3px 6px;
+    font-size: 12px;
+    white-space:nowrap;
+}
+#rotate a:hover{
+    border:1px solid #2aa6dd;
+    background:#2aa6dd;
+    border-radius:5px;
+    color:#FFF;
+}
+
+/*canvas*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+    background: linear-gradient(to bottom, #dcdcdc 0%, palevioletred 100%);
+}
+
+#main-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .7;
+    }
+}
+#canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*input*/
+.search-next {
+    font-size: 0;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+.search-next input{
+    display: inline-block;
+    width: 190px;
+    font-size: 12px;
+    line-height: 24px;
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    border-radius: 0;
+    color: #333;
+    padding: 1px 10px;
+    transition: border-color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s;
+    vertical-align: middle;
+}
+.search-next input:focus{
+    background-color: #ccc;
+    border-color: #999;
+    outline: 0 none;
+}
+.inp-search-icon{
+    display: inline-block;
+    border-radius: 0;
+    width: 30px;
+    left: -3px;
+    height: 28px;
+    vertical-align: middle;
+    background: red;
+}
