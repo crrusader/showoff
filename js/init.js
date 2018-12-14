@@ -7,7 +7,7 @@ CanvasStar.init();
 var radius = 150;
 var dtr = Math.PI / 180;
 // d => 视角深度初始值，球z轴深 类似perspective
-var d = radius*2;
+var d = radius * 2;
 
 var mcList = [];
 // 是否运动
@@ -59,7 +59,6 @@ window.onload = function() {
 
     oDiv.onmousemove = function(ev) {
         var oEvent = window.event || ev;
-
         // 将圆分为一个十字坐标轴计算
         mouseX = oEvent.clientX - (oDiv.offsetLeft + oDiv.offsetWidth / 2);
         mouseY = oEvent.clientY - (oDiv.offsetTop + oDiv.offsetHeight / 2);
@@ -68,14 +67,21 @@ window.onload = function() {
     };
 
     setInterval(update, 30);
-    
-    document.querySelector('.inp-search-icon').onclick = function () {
+
+    document.querySelector('.inp-search-icon').onclick = function() {
         let tagA = document.querySelectorAll('#rotate a'),
             tagB = document.querySelector('.inp-search').value;
         tagB = tagB ? tagB : 'JJY鸭鸭猪'
-        tagA.forEach( vm => {
+        tagA.forEach(vm => {
             vm.innerHTML = tagB
         })
+        // 重置随机方向
+        mouseX = Math.random() * 150 * (Math.random() > 0.5 ? 1 : -1);
+        mouseY = Math.random() * 150 * (Math.random() > 0.5 ? 1 : -1);
+        // 触发滚动
+        active = true;
+        setTimeout(function() {
+            active = false;
+        }, 600)
     }
 };
-
