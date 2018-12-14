@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>rotate</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- rotateball -->
         <style>
             *{
                 padding: 0;
@@ -14,6 +15,8 @@
                 height: 250px;
                 position: relative;
                 margin: 40px auto;
+                top: 50%;
+                margin-top: -145px;
             }
             #rotate a{
                 position: absolute;
@@ -32,8 +35,42 @@
                 color:#FFF;
             }
         </style>
+        <!-- canvas -->
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background: black;
+                background: linear-gradient(to bottom, #dcdcdc 0%, palevioletred 100%);
+            }
+
+            #main-canvas {
+                width: 100%;
+                height: 100%;
+            }
+
+            @keyframes colorChange {
+                0%, 100% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: .7;
+                }
+            }
+            #canvas{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
     </head>
     <body>
+        <canvas id="canvas"></canvas>
         <div id="rotate">
             <a href="">=>JJY鸭鸭猪<=</a>
             <a href="">=>JJY鸭鸭猪<=</a>
@@ -81,6 +118,13 @@
             <a href="">=>JJY鸭鸭猪<=</a>
         </div>
     </body>
+    <script src="canvasstar.js"></script>
+    <!-- 星星初始化 -->
+    <script>
+        var CanvasStar = new CanvasStar;
+        CanvasStar.init();
+    </script>
+    <!-- 球初始化 -->
     <script type="text/javascript">
         // 球的半径
         var radius = 150;
