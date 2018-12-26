@@ -1,28 +1,351 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>rotate</title>
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="renderer" content="webkit" />
-        <meta name="MobileOptimized" content="320" />
-        <meta http-equiv="Cache-Control" content="no-siteapp" />
-        <meta content="telephone=no" name="format-detection" />
-        <link rel="stylesheet" href="./css/main.css">
-    </head>
-    <body>
-        <canvas id="canvas"></canvas>
-        <div id="rotate">
-            <a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a><a href="">LOREM</a>
-        </div>
-        <div class="search-next">
-			<input class="inp-search" placeholder="请输入你想打的人">
-			<a class="inp-search-icon">&gt;</a>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<!-- windows phone 点击无高光 -->
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit" />
+<meta name="MobileOptimized" content="320" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta content="telephone=no" name="format-detection" />
+		<title>首页</title>
+	</head>
+
+	<body style="margin: 0;">
+		<!--content-->
+		<style type="text/css">
+			.section{
+				width: 100%;
+			}
+			.section img{
+				width: 100%;
+			}
+			.section a{
+				width: 100%;
+				display: inline-block;
+			}
+			.btn{
+				height: 31px;
+				line-height: 31px;
+				min-width: 120px;
+				font-size: 12px;
+				color: #000;
+				background: #fff;
+				display: inline-block;
+				text-align: center;
+				border: 1px solid #000000;
+				text-decoration: none;
+			}
+			.btn:hover{
+				background: #000;
+				color: #fff;
+			}
+			.cont-box{
+				margin: 3.5% auto 9%;
+			}
+			.no-margin .btn-cat{
+				margin-top: 0;
+			}
+			.img{
+				width: 100%;
+				display: block;
+			}
+			.cont-box h4{
+				font-size: 20px;
+				line-height: 20px;
+				color: #000;
+				margin: 0 auto 4px;
+				padding-left: 6.33%;
+			}
+			.cont-box p{
+				font-size: 14px;
+				color: #2f2f2f;
+				padding: 0;
+				margin: 0;
+				line-height: 20px;
+				padding-left: 6.33%;
+			}
+			.btn-cat{
+				margin-top: 11px;
+				padding-left: 6.33%;
+			}
+			.btn-cat a{
+				width: auto;
+			}
+			.cont-box .btn-cat .btn:nth-child(1){
+				margin-right: 10px;
+			}
+			.index-list,.cowboy{
+				margin: 25px auto;
+			}
+			/*section-1*/
+			.section-1{
+				background: url(images/img-1.jpg) no-repeat;
+				width: 100%;
+				background-size:100% 100%;
+				margin-bottom: 25px;
+			}
+			.section-1 .cont-box{
+				margin: 0 auto;
+				padding: 65px 0;
+				text-align: center;
+			}
+			.section-1 .cont-box h4{
+				margin: 0 auto 15px;
+				font-size: 46px;
+				line-height: 46px;
+				color: #fff;
+				letter-spacing: 22px;
+				font-weight: bold;
+				padding-left: 0;
+			}
+			.section-1 .cont-box p{
+				color: #fff;
+				font-weight: bold;
+				font-size: 16px;
+				padding-left: 0;
+			}
+			.section-1 .cont-box .btn-cat{
+				margin-top: 14px;
+				padding-left: 0;
+			}
+			.section-1 .cont-box .btn-cat a{
+				font-size: 14px;
+			}
+			.lp-relative {
+				position: relative;
+			}
+
+			.lp-relative img {
+				display: block;
+				width: 100%;
+			}
+
+			.lp-relative .lp-link {
+				position: absolute;
+			}
+
+			.lp-relative .lp-link img {
+				height: 100%;
+			}
+			/* banner */
+			/* 牛仔时装 */
+			/* index-list */
+
+			.lists-link1 {
+				top: 0%;
+				height: 100%;
+				left: 0%;
+				width: 36%;
+			}
+
+			.lists-link2 {
+				top: 0%;
+				height: 49%;
+				left: 38%;
+				width: 30%;
+			}
+
+			.lists-link3 {
+				top: 49%;
+				height: 51%;
+				left: 38%;
+				width: 30%;
+			}
+
+			.lists-link4 {
+				top: 0%;
+				height: 53%;
+				left: 70%;
+				width: 29%;
+			}
+
+			.lists-link5 {
+				top: 53%;
+				height: 47%;
+				left: 70%;
+				width: 29%;
+			}
+		</style>
+		<div class="content pad-center" style="font-size: 0px;">
+			<div class="section section-1">
+				<div class="cont-box">
+					<h4>SALE</h4>
+					<p>秋冬尖货低至  <span>5</span>折</p>
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">选购男士</a>
+						<a class="btn" href="" target="_blank">选购女士</a>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-2.jpg"/>
+				</a>
+				<div class="cont-box">
+					<h4>佳节献礼 </h4>
+					<p>用简约配饰表达你的心意</p>
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">选购男士</a>
+						<a class="btn" href="" target="_blank">选购女士</a>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-3.jpg"/>
+				</a>
+				<div class="cont-box">
+					<h4>迎接生活中的每个挑战 </h4>
+					<p>换季穿搭的运动基本款</p>
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">选购男士运动 </a>
+						<a class="btn" href="" target="_blank">选购女士运动 </a>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-4.jpg"/>
+				</a>
+				<div class="cont-box">
+					<h4>人气内衣系列  </h4>
+					<p>舒适，透气，柔软</p>
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">选购男士</a>
+						<a class="btn" href="" target="_blank">选购女士</a>
+					</div>
+				</div>
+			</div>
+			<!-- 牛仔时装 -->
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-7.jpg"/>
+				</a>
+				<div class="cont-box no-margin">
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">男士</a>
+						<a class="btn" href="" target="_blank">女士</a>
+					</div>
+				</div>
+			</div>
+			<!-- 牛仔时装list -->
+			<div class="lp-relative section index-list">
+				<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-6.jpg" alt="">
+				<!-- 左边 -->
+				<a class="lp-link lists-link1" href="https://m.calvinklein.cn/category/list?c=ckj_jeans" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<!-- 中间两个 -->
+				<a class="lp-link lists-link2" href="https://m.calvinklein.cn/category/list?c=ckj_wovenshirt" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<a class="lp-link lists-link3" href="https://m.calvinklein.cn/category/list?c=ckj_sweatshirt" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<!-- 右边两个 -->
+				<a class="lp-link lists-link4" href="https://m.calvinklein.cn/category/list?c=ckj_outerwear" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<a class="lp-link lists-link5" href="https://m.calvinklein.cn/category/list?c=ckj_tshirts" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+			</div>
+			<!-- 内衣系列 -->
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-7.jpg"/>
+				</a>
+				<div class="cont-box no-margin">
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">男士</a>
+						<a class="btn" href="" target="_blank">女士</a>
+					</div>
+				</div>
+			</div>
+			<!-- 内衣系列list -->
+			<div class="lp-relative section cowboy">
+				<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-8.jpg" alt="">
+				<!-- 左边 -->
+				<a class="lp-link lists-link1" href="https://m.calvinklein.cn/category/list?c=cku_underwear" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<!-- 中间两个 -->
+				<a class="lp-link lists-link2" href="https://m.calvinklein.cn/category/list?c=cku_bra&amp;g=women&amp;id=173#top" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<a class="lp-link lists-link3" href="https://m.calvinklein.cn/category/list?c=cku_sleepwear" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<!-- 右边两个 -->
+				<a class="lp-link lists-link4" href="https://m.calvinklein.cn/search/list?k=%E7%A4%BC%E7%9B%92#top" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<a class="lp-link lists-link5" href="https://m.calvinklein.cn/category/list?c=cku_swimsuit" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+			</div>
+			<!-- 时尚运动 -->
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-9.jpg"/>
+				</a>
+				<div class="cont-box no-margin">
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">男士</a>
+						<a class="btn" href="" target="_blank">女士</a>
+					</div>
+				</div>
+			</div>
+			<!-- 时尚运动list -->
+			<div class="lp-relative section cowboy">
+				<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-10.jpg" alt="">
+				<!-- 左边 -->
+				<a class="lp-link lists-link1" href="https://m.calvinklein.cn/category/list?c=ckp_outerwear" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<!-- 中间两个 -->
+				<a class="lp-link lists-link2" href="https://m.calvinklein.cn/category/list?c=ckp_bras&amp;g=women" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<a class="lp-link lists-link3" href="https://m.calvinklein.cn/category/list?c=ckp&amp;t=bottoms" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<!-- 右边两个 -->
+				<a class="lp-link lists-link4" href="https://m.calvinklein.cn/category/list?c=ckp_knittop" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<a class="lp-link lists-link5" href="https://m.calvinklein.cn/category/list?c=ckp_acc" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+			</div>
+			<!-- 时尚配饰 -->
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-11.jpg"/>
+				</a>
+				<div class="cont-box no-margin">
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">男士</a>
+						<a class="btn" href="" target="_blank">女士</a>
+					</div>
+				</div>
+			</div>
+			<!-- 时尚配饰list -->
+			<div class="lp-relative cowboy">
+				<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-12.jpg" alt="">
+				<!-- 左边 -->
+				<a class="lp-link lists-link1" href="https://m.calvinklein.cn/category/list?c=ckja_bags" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<!-- 中间两个 -->
+				<a class="lp-link lists-link2" href="https://m.calvinklein.cn/category/list?c=ckf" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<a class="lp-link lists-link3" href="https://m.calvinklein.cn/category/list?c=ckja_belt" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<!-- 右边两个 -->
+				<a class="lp-link lists-link4" href="https://m.calvinklein.cn/category/list?c=ckja_watches-jewelry" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+				<a class="lp-link lists-link5" href="https://m.calvinklein.cn/category/list?c=ckja_eyewear" target="_blank"> <img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/bink.png" alt=""> </a>
+			</div>
+			<!-- 铂金系列 -->
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-13.jpg"/>
+				</a>
+				<div class="cont-box no-margin">
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">男士</a>
+						<a class="btn" href="" target="_blank">女士</a>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<a href="" target="_blank">
+					<img src="http://res.calvinklein.cn/resources/mobile/s-lp/lp-181218-home/images/img-14.jpg"/>
+				</a>
+				<div class="cont-box no-margin">
+					<div class="btn-cat">
+						<a class="btn" href="" target="_blank">男士</a>
+						<a class="btn" href="" target="_blank">女士</a>
+					</div>
+				</div>
+			</div>
 		</div>
-    </body>
-    <script src="./js/canvasstar.js"></script>
-    <script src="./js/utils-ball.js"></script>
-    <script src="./js/init.js"></script>
+	</body>
+
 </html>
